@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/hiber_projects</property>
+    <property name="connection.username">root</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <property name="use_sql_comments">true</property>
+    <property name="hbm2ddl.auto">update</property>
+     <property name="cache.use_second_level_cache">true</property>   
+     <property name="cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>  
+     <property name="hibernate.cache.region.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</property>
+    <mapping class="sample_crud.pharamcy"/>
+     <mapping class="one_class_two_table.employee_sal"/>
+     <mapping class="two_class_one_table.address"/>
+     <mapping class="two_class_one_table.student"/>
+     <mapping class="onetoone.license_info"/>
+     <mapping class="onetoone.owner"/>
+     <mapping class="onetomany.college"/>
+     <mapping class="onetomany.Department"/>
+     <mapping class="manytomany.staffs"/>
+     <mapping class="manytomany.Student"/>
+     <mapping class="defaultinheritance.cargo"/>
+     <mapping class="defaultinheritance.reciever"/>
+      <mapping class="singleinheritance.gamestore"/>
+      <mapping class="singleinheritance.horror"/>
+        <mapping class="table_per_classes.Vechile"/>
+      <mapping class="table_per_classes.two_wheeler"/>
+      <mapping class="jointable.house"/>
+      <mapping class="HQLQUERIES.pharamacy_shop"/>
+      <mapping class="jointable.tenants"/>
+      <mapping class="Batching.example"/>
+    </session-factory>
+</hibernate-configuration>
